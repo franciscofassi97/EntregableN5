@@ -1,0 +1,16 @@
+extends index.pug
+block formProductos
+    h1 Agregar Producto 
+    form(action="/api/productos/create", method="post")
+        label(for="title") Nombre
+        input(type="text", name="title", placeholder="Nombre" id="title")
+        br
+        label(for="price") Precio
+        input(type="text", name="price", placeholder="Precio" id="price")
+        br
+        label(for="thumbnail") Imagen
+        input(type="text", name="thumbnail", placeholder="Url de la imagen" id="thumbnail")
+        br
+        input(type="submit", value="Agregar")
+    button 
+        a(href="http://localhost:8080/api/productos/all") Volver a productos
